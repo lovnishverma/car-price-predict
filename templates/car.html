@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Website</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <style>
+    /* Set black background color, white text and some padding */
+    footer {
+     position: fixed;
+            
+            bottom: 0;
+            width: 100%;
+            color: white;
+             padding: 15px;
+            /* Height of the footer*/
+            height: 40px;
+           background-color: #555;
+    }
+    
+    /* On small screens, set height to 'auto' for sidenav and grid */
+    @media screen and (max-width: 767px) {
+      .sidenav {
+        height: auto;
+        padding: 15px;
+      }
+      .row.content {height:auto;} 
+    }
+/*     to make the box transparent  */
+    .trans{
+              width: 1200px;
+              background-color: #ffffff99;
+              box-shadow: 0 0 9px 0 rgba(0,0,0,0.3);
+              margin: 100px auto;
+              }
+    
+/* link */
+    a {
+  
+  color: white;
+  text-align: center;}
+    
+/* background image  */
+     body {
+  
+  background-repeat: no-repeat;
+  background-attachment: fixed;  
+  background-size: cover;
+    
+    
+}
+
+  </style>
+</head>
+<body background="https://cdn.glitch.global/8599b2d2-58ab-4d42-98f5-97fa4c6bad04/car_bg.jpg?v=1682624565840">
+  
+
+<div class="container">
+<div class="panel-group">
+    <div class="panel panel-info trans">
+      <div class="panel-heading">
+      <div class="panel-title" align="center"><strong> CAR PRICE PREDICTION </strong></div>
+      </div>
+       
+        <div class="panel-body">
+<hr>
+<!-- <center><img src="https://cdn.glitch.global/8599b2d2-58ab-4d42-98f5-97fa4c6bad04/iris.png?v=1680459047489" alt="Types of IRIS" width="1000" height="500"></center> -->
+          
+
+  
+         
+<form action="/Car" method="POST">
+  <table class="table table-striped trans" align="center">
+    
+    <div class="row">
+    <tr>
+       <div class="col-sm-6">
+         <td><label for="fueltype" class="form-label">Select Fuel Type (select one):</label></td></div>
+        <div class="col-sm-6">
+          <td><select class="form-select" id="fueltype" name="fueltype" required>
+                <option value="1">Gas</option>
+                <option value="2">Diesel</option>
+                
+              </select></td></div>
+    </tr>
+
+      <tr>
+        <div class="col-sm-6">
+          <td><label for="enginetype" class="form-label">Select Engine Type (select one):</label></td></div>
+        <div class="col-sm-6">
+          <td><select class="form-select" id="enginetype" name="enginetype" required>
+                <option value="1">dohc</option>
+                <option value="2">ohcv</option>
+                <option value="3">ohc</option>
+                <option value="4">l</option>
+                <option value="5">rotor</option>
+                <option value="6">ohcf</option>
+                <option value="7">dohcv</option>
+              </select></td></div>
+    </tr>
+
+          
+    <tr>
+        <div class="col-sm-6">
+          <td><label for="enginesize" class="form-label">Enter Engine Size (Range: 61-326): </label></td> </div>
+        <div class="col-sm-6">
+          <td><input type="text" name="enginesize" placeholder="Enter Engine Size" required></td></div>
+    </tr>
+    <tr>
+        <div class="col-sm-6">
+          <td><label for="horsepower" class="form-label">Enter Horse Power (Range: 48-288): </label></td></div>
+        <div class="col-sm-6">
+          <td><input type="text" name="horsepower" placeholder="Enter Horse Power" required></td></div>
+    </tr>
+    
+    <tr>
+    <td colspan="2" align="center">
+      <input type="submit" value="Predict Car Price">
+      <input type="reset" value="Clear">
+    </td>
+    </tr>
+    </div>
+  </table>
+  
+</form>
+</div>
+  
+          </div>
+     </div>
+
+   <div class="panel panel-success trans">
+     <div class="panel-heading"> The Car Price is : </div>
+     <div class="panel-body" align="center"><h1> $ {{data1}} </h1></div>
+     
+     <div class="pannel-body" align="center"><h1> &#8377; {{data2}} </h1></div>
+   </div>
+  </div>
+  </body>
+</html>
