@@ -2,7 +2,7 @@ Flask
 pandas
 numpy
 scikit-learn
-
+gunicorn
 
 
 
